@@ -1,0 +1,109 @@
+//Navigation Content
+.nav {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: #adb6bf;
+  padding: 15px 50px;
+  z-index: 2; //
+ h2 {
+  font-weight: bold;
+  font-size: 2.4rem;
+  color: @font-light;
+}
+}
+.nav .nav-button .nav-open {
+  cursor: pointer;
+  z-index: 3;
+  height: 24px;
+}
+.nav .nav-button .nav-close {
+  z-index: 2; //
+  display:none;
+}
+.nav a {
+  text-decoration: none;
+}
+
+
+
+
+//Menu Content 
+.menu {
+  position: fixed;
+  width: 100%;
+  background-color: #adb6bf;
+  margin-top: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  z-index: 2;
+ a {
+  color: @font-light;
+  font-size: 4.5rem;
+  line-height: 8.5rem;
+  font-weight: bold;
+  width: 200px;
+  text-decoration: none;
+}
+}
+.hidden {
+  display:none;
+}
+.menu a:hover {
+  color: @font-black;
+}
+.menu a:first-child {
+  margin-top: 145px;
+}
+
+
+
+//Jumbotron Content
+.jumbotron {
+  position: relative;
+  h1 {
+    position: absolute;
+    bottom: 50px;
+    left: 60px;
+    z-index: 0; //
+    font-weight: bold;
+    font-size: 6.4rem;
+    line-height: 7.5rem;
+    color: @font-light;
+    padding: 35px 2px 0;
+    letter-spacing: 1px;
+}
+}
+.jumbotron .jumbotron-desktop {
+  width: 100%;
+  margin-top: 54px;
+  z-index: 3;
+}
+.jumbotron .jumbotron-mobile {
+  display: none;
+}
+
+
+
+@media (max-width: 500px) {
+  .jumbotron .jumbotron-desktop {
+    display: none;
+  }
+  .jumbotron .jumbotron-mobile {
+    width: 100%;
+    margin-top: 60px;
+    display: block;
+  }
+  .jumbotron h1 {
+    bottom: 25px;
+    left: 18px;
+    font-weight: normal;
+    font-size: 4.6rem;
+    line-height: 4.6rem;
+  }
+}

@@ -1,156 +1,3 @@
-.nav {
-  width: 100%;
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  background-color: #adb6bf;
-  padding: 15px 50px;
-  z-index: 2;
-}
-.nav h2 {
-  font-weight: bold;
-  font-size: 2.4rem;
-  color: #FFFFFF;
-}
-.nav .nav-button .nav-open {
-  cursor: pointer;
-  z-index: 3;
-  height: 24px;
-}
-.nav .nav-button .nav-close {
-  z-index: 2;
-  display: none;
-}
-.nav a {
-  text-decoration: none;
-}
-.menu {
-  position: fixed;
-  width: 100%;
-  background-color: #adb6bf;
-  margin-top: 50px;
-  align-items: center;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  z-index: 2;
-}
-.menu a {
-  color: #FFFFFF;
-  font-size: 4.5rem;
-  line-height: 8.5rem;
-  font-weight: bold;
-  width: 200px;
-  text-decoration: none;
-}
-.hidden {
-  display: none;
-}
-.menu a:hover {
-  color: #222222;
-}
-.menu a:first-child {
-  margin-top: 145px;
-}
-.jumbotron {
-  position: relative;
-}
-.jumbotron h1 {
-  position: absolute;
-  bottom: 50px;
-  left: 60px;
-  z-index: 0;
-  font-weight: bold;
-  font-size: 6.4rem;
-  line-height: 7.5rem;
-  color: #FFFFFF;
-  padding: 35px 2px 0;
-  letter-spacing: 1px;
-}
-.jumbotron .jumbotron-desktop {
-  width: 100%;
-  margin-top: 54px;
-  z-index: 3;
-}
-.jumbotron .jumbotron-mobile {
-  display: none;
-}
-@media (max-width: 500px) {
-  .jumbotron .jumbotron-desktop {
-    display: none;
-  }
-  .jumbotron .jumbotron-mobile {
-    width: 100%;
-    margin-top: 60px;
-    display: block;
-  }
-  .jumbotron h1 {
-    bottom: 25px;
-    left: 18px;
-    font-weight: normal;
-    font-size: 4.6rem;
-    line-height: 4.6rem;
-  }
-}
-footer {
-  background-color: #828282;
-  color: #FFFFFF;
-  width: 100%;
-}
-footer .footer-content {
-  padding: 45px 10px 20px 20px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-}
-footer .footer-content h3 {
-  font-size: 1.8rem;
-  color: #FFFFFF;
-  font-weight: regular;
-}
-footer .address-text {
-  padding-right: 10px;
-}
-footer .footer-content input {
-  margin-top: 20px;
-  width: 100%;
-  padding: 10px 10px;
-  border-radius: 5px;
-}
-footer .footer-content p {
-  color: #FFFFFF;
-  font-size: 12px;
-  line-height: 26px;
-  font-weight: regular;
-}
-.copyright {
-  text-align: center;
-  color: #FFFFFF;
-  padding-bottom: 15px;
-  margin: auto;
-  font-size: 12px;
-}
-@media (max-width: 500px) {
-  footer {
-    width: 100%;
-  }
-  footer .footer-content {
-    flex-direction: column;
-    padding: 10px;
-  }
-  footer .footer-content content h3 {
-    padding-top: 30px;
-    padding-bottom: 15px;
-  }
-  footer .footer-content .address-text {
-    padding: 20px 0;
-  }
-  .copyright {
-    padding-top: 10px;
-  }
-}
 /*------------------------------------*\
 RESET
 \*------------------------------------*/
@@ -158,6 +5,7 @@ RESET
 v2.0b1 | 201101 
 NOTE:WORK IN PROGRESS
 USE WITH CAUTION AND TEST WITH ABANDON */
+
 html,
 body,
 div,
@@ -282,10 +130,12 @@ ins {
 del {
   text-decoration: line-through;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -293,8 +143,8 @@ html,
 body {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
-  background: #FFFFFF;
-  color: #222222;
+  background: @font-light;
+  color: @font-black;
 }
 h2 {
   font-size: 3.2rem;
@@ -309,36 +159,37 @@ p {
   font-size: 1.6rem;
   line-height: 1.4;
 }
+
 /* Your Code Goes Here */
 .main-content {
   width: 85%;
   margin: auto;
+    .top-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+      .text-content {
+      display: flex;
+      width: 50%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      line-height: 2.4rem;
+        h2 {
+        font-size: 2.4rem;
+        font-weight: bold;
+        color: @font-black;
 }
-.main-content .top-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 50px;
 }
-.main-content .top-info .text-content {
-  display: flex;
-  width: 50%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  line-height: 2.4rem;
 }
-.main-content .top-info .text-content h2 {
-  font-size: 2.4rem;
-  font-weight: bold;
-  color: #222222;
 }
 .main-content .top-info .text-content p {
   margin: 15px 0;
 }
 .main-content .top-info .text-content button {
-  border: 1px solid #222222;
+  border: 1px solid @font-black;
   width: 115px;
   text-align: center;
   cursor: pointer;
@@ -351,31 +202,33 @@ p {
 .main-content .top-info .top-info-mobile {
   display: none;
 }
+
+//reverse
 .main-content .top-info-reverse {
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
   align-items: center;
   margin: 90px 0;
+    .text-content {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 50%;
+      line-height: 2.4rem;
+        h2 {
+          font-size: 2.4rem;
+          font-weight: bold;
+          color: @font-black;
 }
-.main-content .top-info-reverse .text-content {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 50%;
-  line-height: 2.4rem;
 }
-.main-content .top-info-reverse .text-content h2 {
-  font-size: 2.4rem;
-  font-weight: bold;
-  color: #222222;
 }
 .main-content .top-info-reverse .text-content p {
   margin: 15px 0;
 }
 .main-content .top-info-reverse .text-content button {
-  border: 1px solid #222222;
+  border: 1px solid @font-black;
   width: 115px;
   padding: 10px;
   text-align: center;
@@ -388,27 +241,30 @@ p {
 .main-content .top-info-reverse .top-info-mobile {
   display: none;
 }
+
+//recent projects
 .main-content .recent-projects .project {
   position: relative;
+    .project-right-tab {
+      position: absolute;
+      z-index: 0;
+      background-color: @block-bg;
+      padding: 35px 55px;
+      font-size: 2.4rem;
+      font-weight: normal;
+      right: 0;
+      bottom: -37px;
+      letter-spacing: 7px;
+    }
 }
-.main-content .recent-projects .project .project-right-tab {
-  position: absolute;
-  z-index: 0;
-  background-color: #D8D8D8;
-  padding: 35px 55px;
-  font-size: 2.4rem;
-  font-weight: normal;
-  right: 0;
-  bottom: -37px;
-  letter-spacing: 7px;
-}
+
 .main-content .recent-projects h2 {
   padding: 20px 0;
 }
 .main-content .recent-projects .project .project-left-tab {
   position: absolute;
   z-index: 0;
-  background-color: #D8D8D8;
+  background-color: @block-bg;
   padding: 35px 55px;
   font-size: 2.4rem;
   font-weight: normal;
@@ -416,6 +272,7 @@ p {
   bottom: -37px;
   letter-spacing: 7px;
 }
+
 .main-content .recent-projects .project .project-desktop {
   width: 100%;
 }
@@ -427,31 +284,32 @@ p {
   width: 50%;
   font-size: 1.8rem;
 }
+
 @media (max-width: 500px) {
   .main-content {
     max-width: 500px;
     margin: 0 auto;
-  }
-  .main-content .top-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column-reverse;
-    margin: 25px 0;
-    width: 100%;
-  }
-  .main-content .top-info .text-content {
-    width: 100%;
-    padding-top: 20px;
-  }
-  .main-content .top-info .text-content h2 {
-    font-size: 2.4rem;
-    letter-spacing: 0.2rem;
+    .top-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column-reverse;
+        margin: 25px 0;
+        width: 100%;
+        .text-content {
+          width: 100%;
+          padding-top: 20px;
+              h2 {
+                font-size: 2.4rem;
+                letter-spacing: 0.2rem;
+}
+}
+}
   }
   .main-content .top-info .text-content button {
     width: 100%;
-    border: 1px solid #222222;
-    background: #FFFFFF;
+    border: 1px solid @font-black;
+    background: @font-light;
     font-size: 1.8rem;
   }
   .main-content .top-info .top-info-desktop {
@@ -459,7 +317,7 @@ p {
   }
   .main-content .top-info .top-info-mobile {
     width: 100%;
-    display: block;
+    display:block;
   }
   .main-content .top-info-reverse {
     display: flex;
@@ -468,19 +326,19 @@ p {
     flex-direction: column-reverse;
     margin: 25px 0;
     width: 100%;
-  }
-  .main-content .top-info-reverse .text-content {
-    width: 100%;
-    padding-top: 20px;
-  }
-  .main-content .top-info-reverse .text-content h2 {
-    font-size: 2.4rem;
-    letter-spacing: 0.2rem;
-  }
+      .text-content {
+        width: 100%;
+        padding-top: 20px;
+          h2 {
+          font-size: 2.4rem;
+          letter-spacing: 0.2rem;
+}
+}
+}
   .main-content .top-info-reverse .text-content button {
     width: 100%;
-    border: 1px solid #222222;
-    background: #FFFFFF;
+    border: 1px solid @font-black;
+    background: @font-light;
     font-size: 1.8rem;
   }
   .main-content .top-info-reverse .top-info-desktop {
@@ -488,7 +346,7 @@ p {
   }
   .main-content .top-info-reverse .top-info-mobile {
     width: 100%;
-    display: block;
+    display:block;
   }
   .main-content .recent-projects h2 {
     margin: 25px 10px 0;
@@ -501,7 +359,7 @@ p {
   }
   .main-content .recent-projects .project .project-mobile {
     width: 100%;
-    display: block;
+    display:block;
   }
   .main-content .recent-projects .project .project-right-tab {
     right: 15px;
@@ -519,7 +377,7 @@ p {
     text-align: center;
     padding: 35px 40px;
   }
-  .main-content .recent-projects p {
+  .main-content .recent-projects p { //space between the paragraphs
     width: 85%;
     margin-top: 85px;
   }

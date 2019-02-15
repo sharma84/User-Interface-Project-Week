@@ -335,7 +335,7 @@ p {
   color: #222222;
 }
 .main-content .top-info .text-content p {
-  margin: 15px 0;
+  margin: 10px 0;
 }
 .main-content .top-info .text-content button {
   border: 1px solid #222222;
@@ -523,4 +523,44 @@ p {
     width: 85%;
     margin-top: 85px;
   }
+}
+.main-content {
+  width: 60%;
+  margin: auto;
+}
+.main-content .services-content p {
+  margin: 20px 0;
+  padding: 20px 0;
+  font-size: 2.1rem;
+}
+.tabs {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  padding-bottom: 30px;
+}
+.tabs .tabs-link {
+  border: 1px solid #222222;
+  padding: 20px 30px;
+  font-weight: bold;
+}
+.tabs .selected-tab {
+  background: #ADB6BF;
+  color: #FFFFFF;
+}
+.tabs-content .tab-content {
+  display: flex;
+  margin: 15px 0;
+  display: none;
+}
+.tabs-content .selected-tab {
+  display: flex;
+  margin: 15px 0;
+}
+.tabs-content .text-content p {
+  padding: 20px 0;
+  width: 75%;
 }

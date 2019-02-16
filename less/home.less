@@ -182,7 +182,7 @@ p {
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      line-height: 2.4rem;
+      line-height: 2.4;
       h2 {
         font-size: 2.4rem;
         font-weight: bold;
@@ -260,10 +260,10 @@ p {
 
 //recent projects
 .main-content .recent-projects .project {
-  position: relative;
+  position: relative;//parent 
   .project-right-tab {
     position: absolute;
-    z-index: 0;
+    z-index: 0;// h1,tab 0, nav,menu,menuclose 2, menuopen, image 3
     background-color: @block-bg;
     padding: 35px 55px;
     font-size: 2.4rem;
@@ -281,7 +281,7 @@ p {
 }
 .main-content .recent-projects .project .project-left-tab {
   position: absolute;
-  z-index: 0;
+  z-index: 0;// h1,tab 0, nav,menu,menuclose 2, menuopen, image 3
   background-color: @block-bg;
   padding: 35px 55px;
   font-size: 2.4rem;
@@ -305,12 +305,12 @@ p {
 
 //Jumbotron Content
 .jumbotron {
-  position: relative;
+  position: relative;//parent
   h1 {
     position: absolute;
     bottom: 30px;
     left: -110px;
-    z-index: 0; //
+    z-index: 0; // h1,tab 0, nav,menu,menuclose 2, menuopen, image 3
     font-weight: bold;
     font-size: 6.4rem;
     line-height: 8rem;
@@ -321,7 +321,7 @@ p {
 .jumbotron .jumbotron-desktop {
   width: 100%;
   margin-top: 54px;
-  z-index: 3;
+  z-index: 3;// h1,tab 0, nav,menu,menuclose 2, menuopen, image 3
 }
 .jumbotron .jumbotron-mobile {
   display: none;
@@ -445,7 +445,7 @@ p {
     bottom: -75px;
     font-size: 2rem;
     text-align: center;
-    padding: 35px 70px;
+    padding: 35px 65px;
   }
   .main-content .recent-projects .project .project-left-tab {
     right: 15px;

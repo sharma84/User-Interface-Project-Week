@@ -4,11 +4,11 @@
   position: fixed;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-direction: row;
-  background-color: #adb6bf;
+  background-color: @nav-bg;
   padding: 8px 50px;
-  z-index: 2; //
+  align-items: center;
+  z-index: 2; // h1,tab 0, nav,menu,menuclose 2, menuopen, image 3
   margin-top: 15px;
   h2 {
     font-weight: bold;
@@ -18,11 +18,11 @@
 }
 .nav .nav-button .nav-open {
   cursor: pointer;
-  z-index: 3;
+  z-index: 3;// h1,tab 0, nav,menu,menuclose 2, menuopen, image 3
   height: 24px;
 }
-.nav .nav-button .nav-close {
-  z-index: 2; //
+.nav .nav-button .nav-close  {
+  z-index: 2; // h1,tab 0, nav,menu,menuclose 2, menuopen, image 3
   display: none;
 }
 .nav a {
@@ -33,13 +33,13 @@
 .menu {
   position: fixed;
   width: 880px;
-  background-color: #adb6bf;
+  background-color: @nav-bg;
   margin-top: 50px;
   align-items: center;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  z-index: 2;
+  z-index: 2;// h1,tab 0, nav,menu,menuclose 2, menuopen, image 3
   a {
     color: @font-light;
     font-size: 4.5rem;

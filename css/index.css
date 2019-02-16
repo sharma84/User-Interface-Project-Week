@@ -1,13 +1,14 @@
 .nav {
-  width: 100%;
+  width: 880px;
   position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   background-color: #adb6bf;
-  padding: 15px 50px;
+  padding: 8px 50px;
   z-index: 2;
+  margin-top: 15px;
 }
 .nav h2 {
   font-weight: bold;
@@ -28,7 +29,7 @@
 }
 .menu {
   position: fixed;
-  width: 100%;
+  width: 880px;
   background-color: #adb6bf;
   margin-top: 50px;
   align-items: center;
@@ -54,44 +55,10 @@
 .menu a:first-child {
   margin-top: 145px;
 }
-.jumbotron {
-  position: relative;
-}
-.jumbotron h1 {
-  position: absolute;
-  bottom: 50px;
-  left: 60px;
-  z-index: 0;
-  font-weight: bold;
-  font-size: 6.4rem;
-  line-height: 7.5rem;
-  color: #FFFFFF;
-  padding: 35px 2px 0;
-  letter-spacing: 1px;
-}
-.jumbotron .jumbotron-desktop {
-  width: 100%;
-  margin-top: 54px;
-  z-index: 3;
-}
-.jumbotron .jumbotron-mobile {
-  display: none;
-}
 @media (max-width: 500px) {
-  .jumbotron .jumbotron-desktop {
-    display: none;
-  }
-  .jumbotron .jumbotron-mobile {
-    width: 100%;
-    margin-top: 60px;
-    display: block;
-  }
-  .jumbotron h1 {
-    bottom: 25px;
-    left: 18px;
-    font-weight: normal;
-    font-size: 4.6rem;
-    line-height: 4.6rem;
+  .nav {
+    width: 480px;
+    margin-top: 0;
   }
 }
 footer {
@@ -108,10 +75,11 @@ footer .footer-content {
 footer .footer-content h3 {
   font-size: 1.8rem;
   color: #FFFFFF;
-  font-weight: regular;
+  font-weight: normal;
 }
 footer .address-text {
   padding-right: 10px;
+  font-size: 1.4rem;
 }
 footer .footer-content input {
   margin-top: 20px;
@@ -121,19 +89,23 @@ footer .footer-content input {
 }
 footer .footer-content p {
   color: #FFFFFF;
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 26px;
-  font-weight: regular;
+  font-weight: normal;
 }
 .copyright {
   text-align: center;
   color: #FFFFFF;
   padding-bottom: 15px;
   margin: auto;
-  font-size: 12px;
+}
+.copyright p {
+  font-size: 1.2rem;
 }
 @media (max-width: 500px) {
   footer {
+    max-width: 500px;
+    margin: auto;
     width: 100%;
   }
   footer .footer-content {
@@ -143,6 +115,11 @@ footer .footer-content p {
   footer .footer-content content h3 {
     padding-top: 30px;
     padding-bottom: 15px;
+  }
+  footer .footer-content .footer-text h3 {
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+    line-height: 1;
   }
   footer .footer-content .address-text {
     padding: 20px 0;
@@ -310,39 +287,49 @@ p {
   line-height: 1.4;
 }
 /* Your Code Goes Here */
-.main-content {
-  width: 85%;
+.container {
+  max-width: 880px;
+  margin: auto;
+  width: 100%;
+}
+.container .main-content {
+  width: 80%;
   margin: auto;
 }
-.main-content .top-info {
+.container .main-content .top-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-top: 50px;
 }
-.main-content .top-info .text-content {
+.container .main-content .top-info .text-content {
   display: flex;
-  width: 50%;
+  width: 60%;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   line-height: 2.4rem;
 }
-.main-content .top-info .text-content h2 {
+.container .main-content .top-info .text-content h2 {
   font-size: 2.4rem;
   font-weight: bold;
   color: #222222;
+  padding-bottom: 15px;
 }
 .main-content .top-info .text-content p {
   margin: 10px 0;
+  font-size: 1.3rem;
+  line-height: 1.6;
 }
 .main-content .top-info .text-content button {
   border: 1px solid #222222;
+  color: #222222;
   width: 115px;
   text-align: center;
   cursor: pointer;
   padding: 10px;
+  background: none;
 }
 .main-content .top-info .top-info-desktop {
   width: 50%;
@@ -363,23 +350,28 @@ p {
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
-  width: 50%;
+  width: 60%;
   line-height: 2.4rem;
 }
 .main-content .top-info-reverse .text-content h2 {
   font-size: 2.4rem;
   font-weight: bold;
   color: #222222;
+  padding-bottom: 15px;
 }
 .main-content .top-info-reverse .text-content p {
   margin: 15px 0;
+  font-size: 1.3rem;
+  line-height: 1.6;
 }
 .main-content .top-info-reverse .text-content button {
   border: 1px solid #222222;
+  color: #222222;
   width: 115px;
   padding: 10px;
   text-align: center;
   cursor: pointer;
+  background: none;
 }
 .main-content .top-info-reverse .top-info-desktop {
   width: 50%;
@@ -403,7 +395,9 @@ p {
   letter-spacing: 7px;
 }
 .main-content .recent-projects h2 {
-  padding: 20px 0;
+  padding-bottom: 40px;
+  font-size: 2.4rem;
+  font-weight: bold;
 }
 .main-content .recent-projects .project .project-left-tab {
   position: absolute;
@@ -423,30 +417,79 @@ p {
   display: none;
 }
 .main-content .recent-projects p {
-  margin: 90px auto;
-  width: 50%;
+  margin: 80px auto;
+  width: 65%;
   font-size: 1.8rem;
 }
+.jumbotron {
+  position: relative;
+}
+.jumbotron h1 {
+  position: absolute;
+  bottom: 30px;
+  left: -110px;
+  z-index: 0;
+  font-weight: bold;
+  font-size: 6.4rem;
+  line-height: 8rem;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+}
+.jumbotron .jumbotron-desktop {
+  width: 100%;
+  margin-top: 54px;
+  z-index: 3;
+}
+.jumbotron .jumbotron-mobile {
+  display: none;
+}
 @media (max-width: 500px) {
-  .main-content {
+  .container {
     max-width: 500px;
-    margin: 0 auto;
+    margin: auto;
+    width: 100%;
   }
-  .main-content .top-info {
+  .jumbotron .jumbotron-desktop {
+    display: none;
+  }
+  .jumbotron .jumbotron-mobile {
+    width: 100%;
+    margin-top: 60px;
+    display: block;
+  }
+  .jumbotron h1 {
+    bottom: 25px;
+    left: -160px;
+    font-weight: bold;
+    font-size: 4.6rem;
+    line-height: 4.6rem;
+  }
+  .container .main-content {
+    width: 500%;
+    margin: 0;
+    padding: 0;
+  }
+  .container .main-content .top-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column-reverse;
-    margin: 25px 0;
+    margin: 40px 0;
     width: 100%;
   }
-  .main-content .top-info .text-content {
+  .container .main-content .top-info .text-content {
     width: 100%;
     padding-top: 20px;
   }
-  .main-content .top-info .text-content h2 {
+  .container .main-content .top-info .text-content h2 {
     font-size: 2.4rem;
     letter-spacing: 0.2rem;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .main-content .top-info .text-content p {
+    font-size: 1.8rem;
+    padding-bottom: 20px;
   }
   .main-content .top-info .text-content button {
     width: 100%;
@@ -459,14 +502,14 @@ p {
   }
   .main-content .top-info .top-info-mobile {
     width: 100%;
-    display: block;
+    display: flex;
   }
   .main-content .top-info-reverse {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column-reverse;
-    margin: 25px 0;
+    margin: 40px 0;
     width: 100%;
   }
   .main-content .top-info-reverse .text-content {
@@ -476,6 +519,12 @@ p {
   .main-content .top-info-reverse .text-content h2 {
     font-size: 2.4rem;
     letter-spacing: 0.2rem;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .main-content .top-info-reverse .text-content p {
+    font-size: 1.8rem;
+    padding-bottom: 20px;
   }
   .main-content .top-info-reverse .text-content button {
     width: 100%;
@@ -488,11 +537,11 @@ p {
   }
   .main-content .top-info-reverse .top-info-mobile {
     width: 100%;
-    display: block;
+    display: flex;
   }
   .main-content .recent-projects h2 {
     margin: 25px 10px 0;
-    padding: 40px 0 20px;
+    padding: 20px 0 35px;
     font-weight: bold;
     font-size: 2.4rem;
   }
@@ -501,37 +550,38 @@ p {
   }
   .main-content .recent-projects .project .project-mobile {
     width: 100%;
-    display: block;
+    display: flex;
   }
   .main-content .recent-projects .project .project-right-tab {
     right: 15px;
     left: 15px;
     bottom: -75px;
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-align: center;
-    padding: 35px 40px;
+    padding: 35px 70px;
   }
   .main-content .recent-projects .project .project-left-tab {
     right: 15px;
     left: 15px;
     bottom: -75px;
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-align: center;
-    padding: 35px 40px;
+    padding: 35px;
   }
   .main-content .recent-projects p {
     width: 85%;
-    margin-top: 85px;
+    margin-top: 100px;
+    padding-bottom: 0px;
   }
 }
-.main-content {
-  width: 60%;
-  margin: auto;
+.jumbotron h1 {
+  padding-left: 40px;
+  margin-left: 160px;
 }
 .main-content .services-content p {
   margin: 20px 0;
   padding: 20px 0;
-  font-size: 2.1rem;
+  font-size: 1.4rem;
 }
 .tabs {
   width: 100%;
@@ -544,23 +594,42 @@ p {
 }
 .tabs .tabs-link {
   border: 1px solid #222222;
-  padding: 20px 30px;
+  padding: 10px 20px;
   font-weight: bold;
+  cursor: pointer;
+  text-align: center;
 }
 .tabs .selected-tab {
-  background: #ADB6BF;
+  background: #5E9FB9;
   color: #FFFFFF;
 }
-.tabs-content .tab-content {
-  display: flex;
-  margin: 15px 0;
+.container .main-content {
+  width: 80%;
+  margin: auto;
+}
+.services-content .tab-item {
   display: none;
 }
-.tabs-content .selected-tab {
+.services-content .selected-tab {
   display: flex;
-  margin: 15px 0;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-.tabs-content .text-content p {
-  padding: 20px 0;
-  width: 75%;
+.services-content .selected-tab .text-content {
+  width: 60%;
+  padding: 25px 0;
+}
+.tabs-content .tab-item .text-content h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.tabs-content .tab-item .text-content p {
+  font-size: 1.4rem;
+  margin-top: 0px;
+  padding-right: 35px;
+}
+.tabs-content .tab-item .tab-item-image {
+  width: 40%;
+  margin-top: 72px;
 }

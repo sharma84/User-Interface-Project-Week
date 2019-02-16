@@ -1,11 +1,12 @@
-.main-content {
-  width: 60%;
-  margin: auto;
+.jumbotron h1 {
+  padding-left: 40px;
+  margin-left: 160px;
 }
+
 .main-content .services-content p {
   margin: 20px 0;
   padding: 20px 0;
-  font-size: 2.1rem;
+  font-size: 1.4rem;
 }
 
 .tabs {
@@ -20,27 +21,47 @@
 
 .tabs .tabs-link {
   border: 1px solid @font-black;
-  padding: 20px 30px;
+  padding: 10px 20px;
   font-weight: bold;
+  cursor: pointer;
+  text-align: center;
 }
 
 .tabs .selected-tab {
-  background: @nav-bg;
+  background: @tab-bg;
   color: @font-light;
 }
 
-.tabs-content .tab-content {
-  display: flex;
-  margin: 15px 0;
+.container .main-content {
+  width: 80%;
+  margin: auto;
+}
+
+.services-content .tab-item {
   display: none;
 }
 
-.tabs-content .selected-tab {
+.services-content .selected-tab {
   display: flex;
-  margin: 15px 0;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.services-content .selected-tab .text-content {
+  width: 60%;
+  padding: 25px 0;
+}
+.tabs-content .tab-item .text-content h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.tabs-content .tab-item .text-content p {
+  font-size: 1.4rem;
+  margin-top: 0px;
+  padding-right: 35px;
 }
 
-.tabs-content .text-content p {
-  padding: 20px 0;
-  width: 75%;
+.tabs-content .tab-item .tab-item-image {
+  width: 40%;
+  margin-top: 72px;
 }

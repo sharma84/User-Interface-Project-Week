@@ -161,39 +161,50 @@ p {
 }
 
 /* Your Code Goes Here */
-.main-content {
-  width: 85%;
+
+.container {
+  max-width: 880px;
   margin: auto;
-    .top-info {
+  width: 100%;
+}
+.container .main-content {
+  width: 80%;
+  margin: auto;
+  .top-info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-top: 50px;
-      .text-content {
+    .text-content {
       display: flex;
-      width: 50%;
+      width: 60%;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
       line-height: 2.4rem;
-        h2 {
+      h2 {
         font-size: 2.4rem;
         font-weight: bold;
         color: @font-black;
-}
-}
-}
+        padding-bottom: 15px;
+      }
+    }
+  }
 }
 .main-content .top-info .text-content p {
   margin: 10px 0;
+  font-size: 1.3rem;
+  line-height: 1.6;
 }
 .main-content .top-info .text-content button {
   border: 1px solid @font-black;
+  color: @font-black;
   width: 115px;
   text-align: center;
   cursor: pointer;
   padding: 10px;
+  background: none;
 }
 .main-content .top-info .top-info-desktop {
   width: 50%;
@@ -210,29 +221,34 @@ p {
   flex-direction: row-reverse;
   align-items: center;
   margin: 90px 0;
-    .text-content {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: flex-start;
-      width: 50%;
-      line-height: 2.4rem;
-        h2 {
-          font-size: 2.4rem;
-          font-weight: bold;
-          color: @font-black;
-}
-}
+  .text-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60%;
+    line-height: 2.4rem;
+    h2 {
+      font-size: 2.4rem;
+      font-weight: bold;
+      color: @font-black;
+      padding-bottom: 15px;
+    }
+  }
 }
 .main-content .top-info-reverse .text-content p {
   margin: 15px 0;
+  font-size: 1.3rem;
+  line-height: 1.6;
 }
 .main-content .top-info-reverse .text-content button {
   border: 1px solid @font-black;
+  color: @font-black;
   width: 115px;
   padding: 10px;
   text-align: center;
   cursor: pointer;
+  background: none;
 }
 .main-content .top-info-reverse .top-info-desktop {
   width: 50%;
@@ -245,21 +261,23 @@ p {
 //recent projects
 .main-content .recent-projects .project {
   position: relative;
-    .project-right-tab {
-      position: absolute;
-      z-index: 0;
-      background-color: @block-bg;
-      padding: 35px 55px;
-      font-size: 2.4rem;
-      font-weight: normal;
-      right: 0;
-      bottom: -37px;
-      letter-spacing: 7px;
-    }
+  .project-right-tab {
+    position: absolute;
+    z-index: 0;
+    background-color: @block-bg;
+    padding: 35px 55px;
+    font-size: 2.4rem;
+    font-weight: normal;
+    right: 0;
+    bottom: -37px;
+    letter-spacing: 7px;
+  }
 }
 
 .main-content .recent-projects h2 {
-  padding: 20px 0;
+  padding-bottom: 40px;
+  font-size: 2.4rem;
+  font-weight: bold;
 }
 .main-content .recent-projects .project .project-left-tab {
   position: absolute;
@@ -280,32 +298,86 @@ p {
   display: none;
 }
 .main-content .recent-projects p {
-  margin: 90px auto;
-  width: 50%;
+  margin: 80px auto;
+  width: 65%;
   font-size: 1.8rem;
 }
 
-@media (max-width: 500px) {
-  .main-content {
-    max-width: 500px;
-    margin: 0 auto;
-    .top-info {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column-reverse;
-        margin: 25px 0;
-        width: 100%;
-        .text-content {
-          width: 100%;
-          padding-top: 20px;
-              h2 {
-                font-size: 2.4rem;
-                letter-spacing: 0.2rem;
-}
-}
-}
+//Jumbotron Content
+.jumbotron {
+  position: relative;
+  h1 {
+    position: absolute;
+    bottom: 30px;
+    left: -110px;
+    z-index: 0; //
+    font-weight: bold;
+    font-size: 6.4rem;
+    line-height: 8rem;
+    color: @font-light;
+    letter-spacing: 1px;
   }
+}
+.jumbotron .jumbotron-desktop {
+  width: 100%;
+  margin-top: 54px;
+  z-index: 3;
+}
+.jumbotron .jumbotron-mobile {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .container {
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+  }
+
+  .jumbotron .jumbotron-desktop {
+    display: none;
+  }
+  .jumbotron .jumbotron-mobile {
+    width: 100%;
+    margin-top: 60px;
+    display: block;
+  }
+  .jumbotron h1 {
+    bottom: 25px;
+    left: -160px;
+    font-weight: bold;
+    font-size: 4.6rem;
+    line-height: 4.6rem;
+  }
+  .container .main-content {
+    width: 500%;
+    margin: 0;
+    padding: 0;
+    .top-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column-reverse;
+      margin: 40px 0;
+      width: 100%;
+      .text-content {
+        width: 100%;
+        padding-top: 20px;
+        h2 {
+          font-size: 2.4rem;
+          letter-spacing: 0.2rem;
+          text-align: center;
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+
+  .main-content .top-info .text-content p {
+    font-size: 1.8rem;
+    padding-bottom: 20px;
+  }
+
   .main-content .top-info .text-content button {
     width: 100%;
     border: 1px solid @font-black;
@@ -317,24 +389,30 @@ p {
   }
   .main-content .top-info .top-info-mobile {
     width: 100%;
-    display:block;
+    display: flex;
   }
   .main-content .top-info-reverse {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column-reverse;
-    margin: 25px 0;
+    margin: 40px 0;
     width: 100%;
-      .text-content {
-        width: 100%;
+    .text-content {
+      width: 100%;
+      padding-top: 20px;
+      h2 {
+        font-size: 2.4rem;
+        letter-spacing: 0.2rem;
+        text-align: center;
         padding-top: 20px;
-          h2 {
-          font-size: 2.4rem;
-          letter-spacing: 0.2rem;
-}
-}
-}
+      }
+    }
+  }
+  .main-content .top-info-reverse .text-content p {
+    font-size: 1.8rem;
+    padding-bottom: 20px;
+  }
   .main-content .top-info-reverse .text-content button {
     width: 100%;
     border: 1px solid @font-black;
@@ -346,11 +424,11 @@ p {
   }
   .main-content .top-info-reverse .top-info-mobile {
     width: 100%;
-    display:block;
+    display: flex;
   }
   .main-content .recent-projects h2 {
     margin: 25px 10px 0;
-    padding: 40px 0 20px;
+    padding: 20px 0 35px;
     font-weight: bold;
     font-size: 2.4rem;
   }
@@ -359,26 +437,27 @@ p {
   }
   .main-content .recent-projects .project .project-mobile {
     width: 100%;
-    display:block;
+    display: flex;
   }
   .main-content .recent-projects .project .project-right-tab {
     right: 15px;
     left: 15px;
     bottom: -75px;
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-align: center;
-    padding: 35px 40px;
+    padding: 35px 70px;
   }
   .main-content .recent-projects .project .project-left-tab {
     right: 15px;
     left: 15px;
     bottom: -75px;
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-align: center;
-    padding: 35px 40px;
+    padding: 35px;
   }
-  .main-content .recent-projects p { //space between the paragraphs
+  .main-content .recent-projects p {
     width: 85%;
-    margin-top: 85px;
+    margin-top: 100px;
+    padding-bottom: 0px;
   }
 }

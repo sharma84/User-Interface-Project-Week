@@ -15,28 +15,32 @@
   font-size: 2.4rem;
   color: #FFFFFF;
 }
-.nav .nav-button .nav-open {
+.nav .nav-buttons {
+  align-items: flex-end;
+}
+.nav .nav-buttons .nav-open {
   cursor: pointer;
   z-index: 3;
   height: 24px;
 }
-.nav .nav-button .nav-close {
-  z-index: 2;
+.hidden {
   display: none;
 }
 .nav a {
   text-decoration: none;
 }
 .menu {
-  position: fixed;
+  position: absolute;
   width: 880px;
   background-color: #ADB6BF;
-  margin-top: 50px;
+  margin-top: 223px;
   align-items: center;
+  left: 0px;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   z-index: 2;
+  color: #FFFFFF;
 }
 .menu a {
   color: #FFFFFF;
@@ -53,12 +57,21 @@
   color: #222222;
 }
 .menu a:first-child {
-  margin-top: 145px;
+  margin-top: 150px;
 }
 @media (max-width: 500px) {
   .nav {
     width: 480px;
     margin-top: 0;
+  }
+  .menu {
+    width: 480px;
+    position: absolute;
+    margin-top: 180px;
+    padding-bottom: 30px;
+  }
+  .menu a:first-child {
+    margin-top: 55px;
   }
 }
 footer {
@@ -67,7 +80,7 @@ footer {
   width: 100%;
 }
 footer .footer-content {
-  padding: 45px 10px 20px 20px;
+  padding: 45px 50px 20px 80px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -76,13 +89,14 @@ footer .footer-content h3 {
   font-size: 1.8rem;
   color: #FFFFFF;
   font-weight: normal;
+  line-height: 1.4;
 }
 footer .address-text {
   padding-right: 10px;
   font-size: 1.4rem;
 }
 footer .footer-content input {
-  margin-top: 20px;
+  margin-top: 10px;
   width: 100%;
   padding: 10px 10px;
   border-radius: 5px;
@@ -462,17 +476,13 @@ p {
   .jumbotron .jumbotron-mobile {
     width: 100%;
     margin-top: 60px;
-    display: block;
+    display: flex;
   }
   .jumbotron h1 {
-    bottom: 25px;
-    left: -160px;
-    font-weight: bold;
-    font-size: 4.6rem;
-    line-height: 4.6rem;
+    margin-left: -40px;
   }
   .container .main-content {
-    width: 500%;
+    width: 500px;
     margin: 0;
     padding: 0;
   }
@@ -582,30 +592,41 @@ p {
   }
 }
 .jumbotron h1 {
-  padding-left: 40px;
-  margin-left: 160px;
+  position: absolute;
+  bottom: 30px;
+  left: 85px;
+  z-index: 0;
+  font-weight: bold;
+  font-size: 6rem;
+  line-height: 7rem;
+  color: #FFFFFF;
 }
 .main-content .services-content p {
   margin: 20px 0;
   padding: 20px 0;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 .tabs {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  font-size: 1.8rem;
   padding-bottom: 30px;
 }
+.tabs .tabs-links {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .tabs .tabs-link {
+  width: 23%;
+  padding: 10px 6px;
   border: 1px solid #222222;
-  padding: 10px 20px;
+  font-size: 1.6rem;
   font-weight: bold;
   cursor: pointer;
   text-align: center;
 }
-.tabs .selected-tab {
+.tabs .selected-link {
   background: #5E9FB9;
   color: #FFFFFF;
 }
@@ -622,19 +643,22 @@ p {
   align-items: flex-start;
 }
 .services-content .selected-tab .text-content {
-  width: 60%;
+  width: 49%;
   padding: 25px 0;
 }
 .tabs-content .tab-item .text-content h2 {
   font-size: 2.4rem;
   font-weight: bold;
+  padding: 20px 0 0px;
 }
-.tabs-content .tab-item .text-content p {
-  font-size: 1.4rem;
+.tab-item .text-content p {
+  font-size: 1.3rem;
   margin-top: 0px;
-  padding-right: 35px;
 }
-.tabs-content .tab-item .tab-item-image {
-  width: 40%;
-  margin-top: 72px;
+.tab-item .tab-desktop-image {
+  width: 46%;
+  margin-top: 85px;
+}
+.tab-item .tab-mobile-image {
+  display: none;
 }

@@ -36,7 +36,7 @@
   position: absolute;
   width: 100%;
   background-color: @nav-bg;
-  margin-top: 223px;
+  margin-top: 250px;
   align-items: center;
   left: 0px;
   display: flex;
@@ -44,6 +44,7 @@
   flex-direction: column;
   z-index: 2; // h1,tab 0, nav,menu,menuclose 2, menuopen, image 3
   color: @font-light;
+  opacity: .9;
   a {
     color: @font-light;
     font-size: 4.5rem;
@@ -53,6 +54,9 @@
     text-decoration: none;
   }
 }
+  .menu a:last-child {
+    padding-bottom: 120px;
+}
 //menu-link hidden
 .hidden {
   display: none;
@@ -61,7 +65,7 @@
   color: @font-black;
 }
 .menu a:first-child {
-  margin-top: 150px;
+  margin-top: 100px;
 }
 @media (max-width: 500px) {
   .nav {
@@ -71,10 +75,13 @@
   .menu {
     width: 100%;
     position: absolute;
-    margin-top: 180px;
-    padding-bottom: 30px;
+    margin-top: 210px;
+   // padding-bottom: 30px;
   }
   .menu a:first-child {
     margin-top: 55px;
   }
+  .menu a:last-child {
+    padding-bottom: 70px;
+}
 }

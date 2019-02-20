@@ -1,6 +1,6 @@
 .nav {
-  width: 880px;
-  position: fixed;
+  width: 100%;
+  position: relative;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -8,7 +8,6 @@
   padding: 8px 50px;
   align-items: center;
   z-index: 2;
-  margin-top: 15px;
 }
 .nav h2 {
   font-weight: bold;
@@ -31,7 +30,7 @@
 }
 .menu {
   position: absolute;
-  width: 880px;
+  width: 100%;
   background-color: #ADB6BF;
   margin-top: 223px;
   align-items: center;
@@ -61,11 +60,11 @@
 }
 @media (max-width: 500px) {
   .nav {
-    width: 480px;
+    width: 100%;
     margin-top: 0;
   }
   .menu {
-    width: 480px;
+    width: 100%;
     position: absolute;
     margin-top: 180px;
     padding-bottom: 30px;
@@ -80,7 +79,7 @@ footer {
   width: 100%;
 }
 footer .footer-content {
-  padding: 45px 50px 20px 80px;
+  padding: 45px 50px 20px 75px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -92,7 +91,6 @@ footer .footer-content h3 {
   line-height: 1.4;
 }
 footer .address-text {
-  padding-right: 10px;
   font-size: 1.4rem;
 }
 footer .footer-content input {
@@ -118,9 +116,8 @@ footer .footer-content p {
 }
 @media (max-width: 500px) {
   footer {
-    max-width: 500px;
-    margin: auto;
     width: 100%;
+    margin: auto;
   }
   footer .footer-content {
     flex-direction: column;
@@ -136,7 +133,7 @@ footer .footer-content p {
     line-height: 1;
   }
   footer .footer-content .address-text {
-    padding: 20px 0;
+    padding: 20px 18px;
     width: 80%;
   }
   footer .footer-content .address-text h3 {
@@ -145,6 +142,7 @@ footer .footer-content p {
   }
   .copyright {
     padding-top: 10px;
+    padding-left: 18px;
     width: 80%;
     text-align: left;
   }
@@ -309,7 +307,7 @@ p {
 }
 /* Your Code Goes Here */
 .container {
-  max-width: 880px;
+  max-width: 800px;
   margin: auto;
   width: 100%;
 }
@@ -458,7 +456,6 @@ p {
 }
 .jumbotron .jumbotron-desktop {
   width: 100%;
-  margin-top: 54px;
   z-index: 3;
 }
 .jumbotron .jumbotron-mobile {
@@ -470,21 +467,18 @@ p {
     margin: auto;
     width: 100%;
   }
+  .jumbotron h1 {
+    margin-left: -40px;
+  }
   .jumbotron .jumbotron-desktop {
     display: none;
   }
   .jumbotron .jumbotron-mobile {
     width: 100%;
-    margin-top: 60px;
     display: flex;
   }
-  .jumbotron h1 {
-    margin-left: -40px;
-  }
   .container .main-content {
-    width: 500px;
-    margin: 0;
-    padding: 0;
+    width: 100%;
   }
   .container .main-content .top-info {
     display: flex;
@@ -557,7 +551,6 @@ p {
     display: flex;
   }
   .main-content .recent-projects h2 {
-    margin: 25px 10px 0;
     padding: 20px 0 35px;
     font-weight: bold;
     font-size: 2.4rem;
@@ -566,8 +559,9 @@ p {
     display: none;
   }
   .main-content .recent-projects .project .project-mobile {
-    width: 100%;
+    width: 125%;
     display: flex;
+    margin-left: -50px;
   }
   .main-content .recent-projects .project .project-right-tab {
     right: 15px;
@@ -586,7 +580,7 @@ p {
     padding: 35px;
   }
   .main-content .recent-projects p {
-    width: 85%;
+    width: 90%;
     margin-top: 100px;
     padding-bottom: 0px;
   }
@@ -600,6 +594,10 @@ p {
   font-size: 6rem;
   line-height: 7rem;
   color: #FFFFFF;
+}
+.container .main-content {
+  width: 80%;
+  margin: auto;
 }
 .main-content .services-content p {
   margin: 20px 0;
@@ -617,7 +615,7 @@ p {
   flex-direction: row;
   justify-content: space-between;
 }
-.tabs .tabs-link {
+.tabs .tabs-links .tabs-link {
   width: 23%;
   padding: 10px 6px;
   border: 1px solid #222222;
@@ -626,39 +624,35 @@ p {
   cursor: pointer;
   text-align: center;
 }
-.tabs .selected-link {
+.tabs-content .tab-item {
+  display: none;
+}
+.selected-link {
   background: #5E9FB9;
   color: #FFFFFF;
 }
-.container .main-content {
-  width: 80%;
-  margin: auto;
-}
-.services-content .tab-item {
-  display: none;
-}
-.services-content .selected-tab {
+.tabs .selected-tab {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-.services-content .selected-tab .text-content {
+.tabs .selected-tab .text-content {
   width: 49%;
   padding: 25px 0;
 }
-.tabs-content .tab-item .text-content h2 {
+.tabs .selected-tab .text-content h2 {
   font-size: 2.4rem;
   font-weight: bold;
   padding: 20px 0 0px;
 }
-.tab-item .text-content p {
+.tabs .selected-tab .text-content p {
   font-size: 1.3rem;
   margin-top: 0px;
 }
-.tab-item .tab-desktop-image {
+.tabs .selected-tab .tab-desktop-image {
   width: 46%;
   margin-top: 85px;
 }
-.tab-item .tab-mobile-image {
+.tabs .selected-tab .tab-mobile-image {
   display: none;
 }

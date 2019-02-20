@@ -12,7 +12,41 @@ class Nav {
     this.navOpen.classList.toggle("hidden");
     this.navClose.classList.toggle("hidden");
     this.menuContent.classList.toggle("hidden");
-  };
+  }
 }
 let navs = document.querySelectorAll(".nav");
 navs.forEach(nav => new Nav(nav));
+
+
+
+class TabLink {
+  constructor(link) {
+    this.link = link;
+    this.data = this.link.dataset.tab;
+    this.item = document.querySelector(`.tab-item[data-tab = "${this.data}"]`);
+    this.tabItem = new TabItem(this.item);
+    this.link.addEventListener('click', this.select);  
+  }
+  select = () => {
+    const links = document.querySelectorAll('.tabs-link');    
+    links.forEach( link => {link.classList.remove('selected-link')
+    });    
+    this.link.classList.add('selected-link');  
+    this.tabItem.select();   
+  }
+}
+
+class TabItem {
+  constructor(item) {
+   this.item = item;
+  }
+  select = () => {
+    const items = document.querySelectorAll('.tab-item');
+    items.forEach( item => {item.classList.remove('selected-tab');
+    })
+    this.item.classList.add('selected-tab');
+  }
+}
+let links = document.querySelectorAll('.tabs-link').forEach( link => new TabLink(link)); 
+
+

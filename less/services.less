@@ -8,6 +8,10 @@
   line-height: 7rem;
   color: @font-light;
 }
+.container .main-content {
+  width: 80%;
+  margin: auto;
+}
 .main-content .services-content p {
   margin: 20px 0;
   padding: 20px 0;
@@ -16,58 +20,56 @@
 .tabs {
   width: 100%;
   padding-bottom: 30px;
+  .tabs-links {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    .tabs-link {//tabs-link
+      width: 23%;
+      padding: 10px 6px;
+      border: 1px solid @font-black;
+      font-size: 1.6rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+    }
+  }
 }
-.tabs .tabs-links {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
+.tabs-content .tab-item {
+  display: none;
 }
-.tabs .tabs-link {
-  width: 23%;
-  padding: 10px 6px;
-  border: 1px solid @font-black;
-  font-size: 1.6rem;
-  font-weight: bold;
-  cursor: pointer;
-  text-align: center;
-}
-.tabs .selected-link {
+
+//selected link and tab
+.selected-link {
   background: @tab-bg;
   color: @font-light;
 }
-.container .main-content {
-  width: 80%;
-  margin: auto;
-}
-.services-content .tab-item {
-  display: none;
-}
-.services-content .selected-tab {
+.tabs .selected-tab {
   display: flex;
   //flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  .text-content {
+    width: 49%;
+    padding: 25px 0;
+  h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding: 20px 0 0px;
+    }
+  }
 }
-.services-content .selected-tab .text-content {
-  width: 49%;
-  padding: 25px 0;
-}
-.tabs-content .tab-item .text-content h2 {
-  font-size: 2.4rem;
-  font-weight: bold;
-  padding: 20px 0 0px;
-}
-.tab-item .text-content p {
+.tabs .selected-tab .text-content p {
   font-size: 1.3rem;
   margin-top: 0px;
   // padding-right: 35px;
 }
-.tab-item .tab-desktop-image {
+.tabs .selected-tab .tab-desktop-image {
   width: 46%;
   margin-top: 85px;
 }
-.tab-item .tab-mobile-image {
+.tabs .selected-tab .tab-mobile-image {
 display: none;
 }

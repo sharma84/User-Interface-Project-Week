@@ -159,7 +159,7 @@ p {
 }
 /* Your Code Goes Here */
 .container {
-  max-width: 880px;
+  max-width: 800px;
   margin: auto;
   width: 100%;
 }
@@ -311,7 +311,7 @@ p {
 }
 .jumbotron .jumbotron-desktop {
   width: 100%;
-  margin-top: 54px;
+ // margin-top: 54px;
   z-index: 3; // h1,tab 0, nav,menu,menuclose 2, menuopen, image 3
 }
 .jumbotron .jumbotron-mobile {
@@ -322,22 +322,21 @@ p {
     max-width: 500px;
     margin: auto;
     width: 100%;
+    
   }
+  .jumbotron h1 {
+   margin-left: -40px;
+  }
+
   .jumbotron .jumbotron-desktop {
     display: none;
   }
   .jumbotron .jumbotron-mobile {
     width: 100%;
-    margin-top: 60px;
     display: flex;
   }
-  .jumbotron h1 {
-    margin-left: -40px;
-  }
   .container .main-content {
-    width: 500px;
-    margin: 0;
-    padding: 0;
+    width: 100%;
     .top-info {
       display: flex;
       justify-content: space-between;
@@ -410,7 +409,6 @@ p {
     display: flex;
   }
   .main-content .recent-projects h2 {
-    margin: 25px 10px 0;
     padding: 20px 0 35px;
     font-weight: bold;
     font-size: 2.4rem;
@@ -419,8 +417,9 @@ p {
     display: none;
   }
   .main-content .recent-projects .project .project-mobile {
-    width: 100%;
+    width: 125%;
     display: flex;
+    margin-left: -50px;
   }
   .main-content .recent-projects .project .project-right-tab {
     right: 15px;
@@ -439,7 +438,7 @@ p {
     padding: 35px;
   }
   .main-content .recent-projects p {
-    width: 85%;
+    width: 90%;
     margin-top: 100px;
     padding-bottom: 0px;
   }

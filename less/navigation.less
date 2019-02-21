@@ -1,20 +1,23 @@
 //Navigation Content
 .nav {
-  width: 100%;
-  position: relative;
+  width: 800px;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   background-color: @nav-bg;
   padding: 8px 50px;
   align-items: center;
-  z-index: 2; // h1,tab 0, nav,menu,menuclose 2, menuopen, image 3
+  opacity: .96;
+  z-index: 3; // h1,tab 0, nav,menu,menuclose 2, menuopen, image 3
   //margin-top: 15px;
   h2 {
     font-weight: bold;
     font-size: 2.4rem;
     color: @font-light;
     cursor: pointer;
+    text-decoration: none;
+    z-index: 3;
   }
 }
 .nav .nav-buttons {
@@ -35,29 +38,26 @@
 }
 //Menu Content
 .menu {
-  position: absolute;
-  width: 100%;
+  position: fixed;
   background-color: @nav-bg;
-  margin-top: 250px;
-  align-items: center;
-  left: 0px;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
+  height: 100%;
+  margin-left: -50px;
+  top: 35px;
   z-index: 2; // h1,tab 0, nav,menu,menuclose 2, menuopen, image 3
   color: @font-light;
-  opacity: .9;
+  opacity: .96;
   a {
     color: @font-light;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    display:flex;
     font-size: 4.5rem;
     line-height: 8.5rem;
     font-weight: bold;
-    width: 200px;
+    width: 800px;
     text-decoration: none;
   }
-}
-  .menu a:last-child {
-    padding-bottom: 120px;
 }
 //menu-link hidden
 .hidden {
@@ -67,7 +67,7 @@
   color: @font-black;
 }
 .menu a:first-child {
-  margin-top: 100px;
+  margin-top: 150px;
 }
 @media (max-width: 500px) {
   .nav {
@@ -76,14 +76,9 @@
   }
   .menu {
     width: 100%;
-    position: absolute;
-    margin-top: 210px;
-   // padding-bottom: 30px;
+    top: 35px;
+  a {
+    width: 100%;
   }
-  .menu a:first-child {
-    margin-top: 55px;
-  }
-  .menu a:last-child {
-    padding-bottom: 70px;
 }
 }

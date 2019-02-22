@@ -598,6 +598,13 @@ p {
   line-height: 7rem;
   color: #FFFFFF;
 }
+.jumbotron .jumbotron-desktop {
+  width: 100%;
+  z-index: 3;
+}
+.jumbotron .jumbotron-mobile {
+  display: none;
+}
 .container .main-content {
   width: 80%;
   margin: auto;
@@ -668,6 +675,13 @@ p {
   .tab-item .tab-desktop-image {
     display: none;
   }
+  .jumbotron .jumbotron-desktop {
+    display: none;
+  }
+  .jumbotron .jumbotron-mobile {
+    width: 100%;
+    display: flex;
+  }
   .tabs .tabs-links {
     display: flex;
     flex-direction: column;
@@ -712,6 +726,13 @@ p {
   line-height: 7rem;
   color: #FFFFFF;
 }
+.jumbotron .jumbotron-desktop {
+  width: 100%;
+  z-index: 3;
+}
+.jumbotron .jumbotron-mobile {
+  display: none;
+}
 .contact-container {
   width: 80%;
   margin: auto;
@@ -735,7 +756,7 @@ p {
   font-size: 1.2rem;
   padding-bottom: 5px;
 }
-input {
+.left .lable input {
   width: 100%;
   padding: 5px 8px;
   color: #828282;
@@ -749,7 +770,7 @@ input {
 }
 .left .lable h3 {
   font-weight: normal;
-  color: black;
+  color: #000000;
   font-size: 1.2rem;
   padding-bottom: 5px;
   padding-top: 20px;
@@ -766,18 +787,16 @@ input {
   border-radius: 3px;
   margin-bottom: 20px;
 }
-.lable .info {
-  border: 2px solid red;
-  width: 100%;
-  font-size: 1.2rem;
+.radio {
+  font-size: 1.4rem;
 }
 .submit {
-  border: 1px solid black;
+  border: 1px solid #000000;
   width: 120px;
   padding: 10px 0;
   cursor: pointer;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 10px 0 40px;
 }
 .right {
@@ -802,7 +821,87 @@ input {
   margin-top: -15px;
 }
 .right .contact-text p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   padding-bottom: 40px;
   color: #222222;
+  font-weight: normal;
+}
+@media (max-width: 500px) {
+  .container {
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+  }
+  .jumbotron .jumbotron-desktop {
+    display: none;
+  }
+  .jumbotron .jumbotron-mobile {
+    width: 100%;
+    display: flex;
+  }
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: space-between;
+  }
+  .left {
+    width: 100%;
+  }
+  .left h2 {
+    font-size: 2.8rem;
+    padding-bottom: 40px;
+  }
+  .left .lable h4 {
+    font-weight: normal;
+    color: #000000;
+    font-size: 1.8rem;
+    width: 100%;
+  }
+  .left .lable input {
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  .lable p {
+    font-size: 1.4rem;
+    padding-bottom: 20px;
+  }
+  .left .lable h3 {
+    font-size: 2rem;
+  }
+  .left .lable .box {
+    padding: 10px;
+  }
+  .left .lable textarea {
+    height: 150px;
+  }
+  .radio {
+    font-size: 1.6rem;
+    justify-content: space-between;
+    margin-top: 10px;
+    text-decoration: none;
+    font: #000000;
+  }
+  .submit {
+    margin-top: 30px;
+    padding: 20px 0 8px;
+    width: 100%;
+    font-size: 1.8rem;
+  }
+  .right {
+    width: 100%;
+    padding: 0;
+  }
+  .right h2 {
+    font-size: 2.8rem;
+    padding-bottom: 20px;
+  }
+  .right .contact-text h3 {
+    font-size: 2rem;
+  }
+  .right .contact-text p {
+    font-size: 1.8rem;
+  }
 }

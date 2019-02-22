@@ -8,6 +8,14 @@
   line-height: 7rem;
   color: @font-light;
 }
+.jumbotron .jumbotron-desktop {
+  width: 100%;
+  // margin-top: 54px;
+  z-index: 3; // h1,tab 0, nav,menu,menuclose 2, menuopen, image 3
+}
+.jumbotron .jumbotron-mobile {
+  display: none;
+}
 .contact-container {
   width: 80%;
   margin: auto;
@@ -31,8 +39,7 @@
   font-size: 1.2rem;
   padding-bottom: 5px;
 }
-
-input {
+.left .lable input {
   width: 100%;
   padding: 5px 8px;
   color: @footer-bg;
@@ -44,10 +51,9 @@ input {
   color: @footer-bg;
   font-size: 1rem;
 }
-
 .left .lable h3 {
   font-weight: normal;
-  color: black;
+  color: @font-dark;
   font-size: 1.2rem;
   padding-bottom: 5px;
   padding-top: 20px;
@@ -64,28 +70,18 @@ input {
   border-radius: 3px;
   margin-bottom: 20px;
 }
-
-.lable .info{
-    border: 2px solid red;
-    width: 100%;
-    font-size: 1.2rem; 
+.radio {
+  font-size: 1.4rem;
 }
-
-
-
-
-
-
 .submit {
-  border: 1px solid black;
+  border: 1px solid @font-dark;
   width: 120px;
   padding: 10px 0;
   cursor: pointer;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 10px 0 40px;
 }
-
 .right {
   display: flex;
   padding-left: 70px;
@@ -101,16 +97,94 @@ input {
     margin-top: 40px;
   }
 }
-
 .right .contact-text h3 {
   font-size: 1.8rem;
   margin-top: 10px;
   color: @font-black;
   margin-top: -15px;
 }
-
 .right .contact-text p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   padding-bottom: 40px;
   color: @font-black;
+  font-weight: normal;
+}
+@media (max-width: 500px) {
+  .container {
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+  }
+  .jumbotron .jumbotron-desktop {
+    display: none;
+  }
+  .jumbotron .jumbotron-mobile {
+    width: 100%;
+    display: flex;
+  }
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: space-between;
+  }
+  .left {
+    width: 100%;
+  }
+  .left h2 {
+    font-size: 2.8rem;
+    padding-bottom: 40px;
+  }
+  .left .lable h4 {
+    font-weight: normal;
+    color:@font-dark;
+    font-size: 1.8rem;
+    width: 100%;
+  }
+  .left .lable input {
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  .lable p {
+    font-size: 1.4rem;
+    padding-bottom: 20px;
+  }
+  .left .lable h3 {
+    font-size: 2rem;
+  }
+  .left .lable .box {
+    padding: 10px;
+  }
+  .left .lable textarea {
+    height: 150px;
+  }
+  .radio {
+    font-size: 1.6rem;
+    justify-content: space-between;
+    margin-top: 10px;
+    text-decoration: none;
+    font: @font-dark;
+  }
+  .submit {
+    margin-top: 30px;
+    padding: 20px 0 8px;
+    width: 100%;
+    font-size: 1.8rem;
+  }
+  .right {
+    width: 100%;
+    padding: 0;
+    h2 {
+      font-size: 2.8rem;
+      padding-bottom: 20px;
+    }
+  }
+  .right .contact-text h3 {
+    font-size: 2rem;
+  }
+  .right .contact-text p {
+    font-size: 1.8rem;
+  }
 }

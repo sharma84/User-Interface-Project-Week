@@ -10,6 +10,14 @@
   line-height: 7rem;
   color: @font-light;
 }
+.jumbotron .jumbotron-desktop {
+  width: 100%;
+ // margin-top: 54px;
+  z-index: 3; // h1,tab 0, nav,menu,menuclose 2, menuopen, image 3
+}
+.jumbotron .jumbotron-mobile {
+  display: none;
+}
 .container .main-content {
   width: 80%;
   margin: auto;
@@ -85,6 +93,13 @@ display: none;
   }
   .tab-item .tab-desktop-image {
     display: none;
+  }
+  .jumbotron .jumbotron-desktop {
+    display: none;
+  }
+  .jumbotron .jumbotron-mobile {
+    width: 100%;
+    display: flex;
   }
   .tabs .tabs-links  {
    display: flex;

@@ -107,6 +107,7 @@ footer .footer-content p {
   font-size: 1.2rem;
   line-height: 26px;
   font-weight: normal;
+  padding-top: 5px;
 }
 .copyright {
   text-align: center;
@@ -124,7 +125,7 @@ footer .footer-content p {
   }
   footer .footer-content {
     flex-direction: column;
-    padding: 10px;
+    padding: 30px 10px;
   }
   footer .footer-content content h3 {
     padding-top: 30px;
@@ -136,7 +137,7 @@ footer .footer-content p {
     line-height: 1;
   }
   footer .footer-content .address-text {
-    padding: 20px 18px;
+    padding: 20px 8px;
     width: 80%;
   }
   footer .footer-content .address-text h3 {
@@ -144,7 +145,7 @@ footer .footer-content p {
     font-size: 2rem;
   }
   .copyright {
-    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 18px;
     width: 80%;
     text-align: left;
@@ -657,4 +658,151 @@ p {
 }
 .tabs .selected-tab .tab-mobile-image {
   display: none;
+}
+@media (max-width: 500px) {
+  .container {
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+  }
+  .tab-item .tab-desktop-image {
+    display: none;
+  }
+  .tabs .tabs-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .tabs .tabs-links .tabs-link {
+    margin-top: 20px;
+    width: 100%;
+    border: 1px solid black;
+    padding: 18px 0;
+    font-size: 2rem;
+  }
+  .main-content .services-content p {
+    margin: 5px 0;
+    font-size: 2rem;
+  }
+  .services-content .selected-tab {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .services-content .selected-tab .text-content {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .services-content .selected-tab .text-content p {
+    font-size: 2rem;
+  }
+  .services-content .selected-tab .tab-mobile-image {
+    width: 100%;
+    display: flex;
+    padding-bottom: 30px;
+  }
+}
+.jumbotron h1 {
+  position: absolute;
+  bottom: 8px;
+  left: 80px;
+  z-index: 0;
+  font-weight: bold;
+  font-size: 5.2rem;
+  line-height: 7rem;
+  color: #FFFFFF;
+}
+.contact-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.left {
+  width: 48%;
+}
+.left h2 {
+  font-size: 1.8rem;
+  color: #222222;
+  font-weight: bold;
+  line-height: 1.4;
+  padding: 30px 0;
+}
+.left .lable h4 {
+  font-weight: bold;
+  color: #828282;
+  font-size: 1.2rem;
+  padding-bottom: 5px;
+}
+input {
+  width: 100%;
+  padding: 5px 8px;
+  color: #828282;
+  font-size: 0.9rem;
+  border: 1px solid #D8D8D8;
+  border-radius: 3px;
+}
+.lable p {
+  color: #828282;
+  font-size: 1rem;
+}
+.left .lable h3 {
+  font-weight: normal;
+  color: black;
+  font-size: 1.2rem;
+  padding-bottom: 5px;
+  padding-top: 20px;
+}
+.left .lable .box {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #D8D8D8;
+}
+.left .lable textarea {
+  height: 100px;
+  width: 100%;
+  border: 1px solid #D8D8D8;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+.lable .info {
+  border: 2px solid red;
+  width: 100%;
+  font-size: 1.2rem;
+}
+.submit {
+  border: 1px solid black;
+  width: 120px;
+  padding: 10px 0;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+  margin: 10px 0 40px;
+}
+.right {
+  display: flex;
+  padding-left: 70px;
+  flex-direction: column;
+  margin: 0;
+  width: 48%;
+}
+.right h2 {
+  font-size: 1.8rem;
+  color: #222222;
+  font-weight: bold;
+  line-height: 1.4;
+  padding: 0;
+  margin-top: 40px;
+}
+.right .contact-text h3 {
+  font-size: 1.8rem;
+  margin-top: 10px;
+  color: #222222;
+  margin-top: -15px;
+}
+.right .contact-text p {
+  font-size: 1.2rem;
+  padding-bottom: 40px;
+  color: #222222;
 }

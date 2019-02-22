@@ -75,3 +75,50 @@
 .tabs .selected-tab .tab-mobile-image {
 display: none;
 }
+
+
+@media (max-width: 500px) {
+  .container {
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+  }
+  .tab-item .tab-desktop-image {
+    display: none;
+  }
+  .tabs .tabs-links  {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+  .tabs-link {
+    margin-top: 20px;
+    width: 100%;
+    border:1px solid black;
+    padding: 18px 0;
+    font-size: 2.0rem;
+  }
+}
+  .main-content .services-content p {
+    margin: 5px 0;
+    font-size: 2.0rem;
+
+  }
+
+  .services-content .selected-tab {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .services-content .selected-tab .text-content {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .services-content .selected-tab .text-content p{
+  font-size: 2.0rem;
+  }
+  .services-content .selected-tab .tab-mobile-image {
+    width: 100%;
+    display:flex;
+    padding-bottom: 30px;
+  }
+}

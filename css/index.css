@@ -312,11 +312,12 @@ p {
 /* Your Code Goes Here */
 .container {
   max-width: 800px;
-  margin: 0 auto;
+  width: 100%;
+  margin: auto;
 }
 .container .main-content {
-  width: 80%;
-  margin: auto;
+  max-width: 80%;
+  margin-left: auto;
 }
 .container .main-content .top-info {
   display: flex;
@@ -716,23 +717,6 @@ p {
     padding-bottom: 30px;
   }
 }
-.jumbotron h1 {
-  position: absolute;
-  bottom: 8px;
-  left: 80px;
-  z-index: 0;
-  font-weight: bold;
-  font-size: 5.2rem;
-  line-height: 7rem;
-  color: #FFFFFF;
-}
-.jumbotron .jumbotron-desktop {
-  width: 100%;
-  z-index: 3;
-}
-.jumbotron .jumbotron-mobile {
-  display: none;
-}
 .contact-container {
   width: 80%;
   margin: auto;
@@ -904,4 +888,43 @@ p {
   .right .contact-text p {
     font-size: 1.8rem;
   }
+}
+.main-content .about-recent-projects .about-project {
+  position: relative;
+}
+.main-content .about-recent-projects .about-project .about-project-right-tab {
+  position: absolute;
+  z-index: 0;
+  background-color: #D8D8D8;
+  padding: 10px 20px;
+  font-size: 2rem;
+  font-weight: normal;
+  left: 0px;
+  top: -60px;
+  letter-spacing: 7px;
+}
+.main-content .about-recent-projects h2 {
+  padding: 60px 0 130px;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.main-content .about-recent-projects .about-project .about-project-left-tab {
+  position: absolute;
+  z-index: 0;
+  background-color: #D8D8D8;
+  padding: 10px 20px;
+  font-size: 2rem;
+  font-weight: normal;
+  left: 0px;
+  top: -60px;
+  letter-spacing: 7px;
+}
+.main-content .about-recent-projects .about-project .about-project-desktop {
+  width: 100%;
+}
+.main-content .about-recent-projects p {
+  margin: 80px auto;
+  width: 65%;
+  font-size: 1.8rem;
+  padding-bottom: 30px;
 }

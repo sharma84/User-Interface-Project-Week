@@ -18,7 +18,7 @@ let navs = document.querySelectorAll(".nav");
 navs.forEach(nav => new Nav(nav));
 
 
-
+//tabs
 class TabLink {
   constructor(link) {
     this.link = link;
@@ -48,5 +48,11 @@ class TabItem {
   }
 }
 let links = document.querySelectorAll('.tabs-link').forEach( link => new TabLink(link)); 
+
+//carousel
+// let projects = document.querySelector('.about-project');
+// project1 = document.querySelector('.about-project');
+
+    
 
 

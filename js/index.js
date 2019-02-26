@@ -1,4 +1,16 @@
 // JS goes here
+//tweenmax (target, duration, {vars-what are we changing});
+window.addEventListener
+(
+    "click", () => 
+  {
+   TweenMax.from('.jumbotron-desktop', 1, {opacity:0.3})
+  }
+);
+
+
+
+
 //navigation and menu
 class Nav { 
   constructor(nav) { 
@@ -52,7 +64,3 @@ let links = document.querySelectorAll('.tabs-link').forEach( link => new TabLink
 //carousel
 // let projects = document.querySelector('.about-project');
 // project1 = document.querySelector('.about-project');
-
-    
-
-

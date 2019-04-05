@@ -1,0 +1,134 @@
+
+.jumbotron h1 {
+  position: absolute;
+  bottom: 30px;
+  left: 85px;
+  z-index: 0; // h1,tab 0, nav,menu,menuclose 2, menuopen, image 3
+  font-weight: bold;
+  font-size: 6rem;
+  line-height: 7rem;
+  color: @font-light;
+}
+.jumbotron .jumbotron-desktop {
+  width: 100%;
+ // margin-top: 54px;
+  z-index: 3; // h1,tab 0, nav,menu,menuclose 2, menuopen, image 3
+}
+.jumbotron .jumbotron-mobile {
+  display: none;
+}
+.container .main-content {
+  width: 80%;
+  margin: auto;
+}
+.main-content .services-content p {
+  margin: 20px 0;
+  padding: 20px 0;
+  font-size: 1.3rem;
+}
+.tabs {
+  width: 100%;
+  padding-bottom: 30px;
+  .tabs-links {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    .tabs-link {//tabs-link
+      width: 23%;
+      padding: 10px 6px;
+      border: 1px solid @font-black;
+      font-size: 1.6rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+    }
+  }
+}
+.tabs-content .tab-item {
+  display: none;
+}
+//selected link and tab
+.selected-link {
+  background: @tab-bg;
+  color: @font-light;
+}
+.tabs .selected-tab {
+  display: flex;
+  //flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  .text-content {
+    width: 49%;
+    padding: 25px 0;
+  h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding: 20px 0 0px;
+    }
+  }
+}
+.tabs .selected-tab .text-content p {
+  font-size: 1.3rem;
+  margin-top: 0px;
+  // padding-right: 35px;
+}
+.tabs .selected-tab .tab-desktop-image {
+  width: 46%;
+  margin-top: 85px;
+}
+.tabs .selected-tab .tab-mobile-image {
+display: none;
+}
+@media (max-width: 500px) {
+  .container {
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+  }
+  .tab-item .tab-desktop-image {
+    display: none;
+  }
+  .jumbotron .jumbotron-desktop {
+    display: none;
+  }
+  .jumbotron .jumbotron-mobile {
+    width: 100%;
+    display: flex;
+  }
+  .tabs .tabs-links  {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+  .tabs-link {
+    margin-top: 20px;
+    width: 100%;
+    border:1px solid black;
+    padding: 18px 0;
+    font-size: 2.0rem;
+  }
+}
+  .main-content .services-content p {
+    margin: 5px 0;
+    font-size: 2.0rem;
+
+  }
+  .services-content .selected-tab {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .services-content .selected-tab .text-content {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .services-content .selected-tab .text-content p{
+  font-size: 2.0rem;
+  }
+  .services-content .selected-tab .tab-mobile-image {
+    width: 100%;
+    display:flex;
+    padding-bottom: 30px;
+  }
+}

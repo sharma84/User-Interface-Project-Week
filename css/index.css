@@ -1,1 +1,930 @@
-/* Should be empty until you compile your LESS */
+.nav {
+  width: 800px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: #ADB6BF;
+  padding: 8px 50px;
+  align-items: center;
+  opacity: 0.96;
+  z-index: 3;
+}
+.nav h2 {
+  font-weight: bold;
+  font-size: 2.4rem;
+  color: #FFFFFF;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 3;
+}
+.nav .nav-buttons {
+  align-items: flex-end;
+}
+.nav .nav-buttons .nav-open {
+  cursor: pointer;
+  z-index: 3;
+  height: 24px;
+}
+.hidden {
+  display: none;
+}
+.nav a {
+  text-decoration: none;
+}
+.menu {
+  position: fixed;
+  background-color: #ADB6BF;
+  height: 100%;
+  margin-left: -50px;
+  top: 35px;
+  z-index: 2;
+  color: #FFFFFF;
+  opacity: 0.96;
+}
+.menu a {
+  color: #FFFFFF;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  display: flex;
+  font-size: 4.5rem;
+  line-height: 8.5rem;
+  font-weight: bold;
+  width: 800px;
+  text-decoration: none;
+}
+.hidden {
+  display: none;
+}
+.menu a:hover {
+  color: #222222;
+}
+.menu a:first-child {
+  margin-top: 150px;
+}
+@media (max-width: 500px) {
+  .nav {
+    width: 100%;
+    margin-top: 0;
+  }
+  .menu {
+    width: 100%;
+    top: 35px;
+  }
+  .menu a {
+    width: 100%;
+  }
+}
+footer {
+  background-color: #828282;
+  color: #FFFFFF;
+  width: 100%;
+}
+footer .footer-content {
+  padding: 45px 50px 20px 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+footer .footer-content h3 {
+  font-size: 1.8rem;
+  color: #FFFFFF;
+  font-weight: normal;
+  line-height: 1.4;
+}
+footer .address-text {
+  font-size: 1.4rem;
+}
+footer .footer-content input {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+footer .footer-content p {
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  line-height: 26px;
+  font-weight: normal;
+  padding-top: 5px;
+}
+.copyright {
+  text-align: center;
+  color: #FFFFFF;
+  padding-bottom: 15px;
+  margin: auto;
+}
+.copyright p {
+  font-size: 1.2rem;
+}
+@media (max-width: 500px) {
+  footer {
+    width: 100%;
+    margin: auto;
+  }
+  footer .footer-content {
+    flex-direction: column;
+    padding: 30px 10px;
+  }
+  footer .footer-content content h3 {
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+  footer .footer-content .footer-text h3 {
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+    line-height: 1;
+  }
+  footer .footer-content .address-text {
+    padding: 20px 8px;
+    width: 80%;
+  }
+  footer .footer-content .address-text h3 {
+    padding-bottom: 8px;
+    font-size: 2rem;
+  }
+  .copyright {
+    padding-bottom: 10px;
+    padding-left: 18px;
+    width: 80%;
+    text-align: left;
+  }
+}
+/*------------------------------------*\
+RESET
+\*------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0b1 | 201101 
+NOTE:WORK IN PROGRESS
+USE WITH CAUTION AND TEST WITH ABANDON */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: ’’;
+  content: none;
+}
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+  background: #FFFFFF;
+  color: #222222;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+h4 {
+  font-size: 1.6rem;
+}
+p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+/* Your Code Goes Here */
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+}
+.container .main-content {
+  max-width: 80%;
+  margin-left: auto;
+}
+.container .main-content .top-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+.container .main-content .top-info .text-content {
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  line-height: 2.4;
+}
+.container .main-content .top-info .text-content h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #222222;
+  padding-bottom: 15px;
+}
+.main-content .top-info .text-content p {
+  margin: 10px 0;
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+.main-content .top-info .text-content button {
+  border: 1px solid #222222;
+  color: #222222;
+  width: 115px;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px;
+  background: none;
+}
+.main-content .top-info .top-info-desktop {
+  width: 50%;
+  padding-left: 15px;
+}
+.main-content .top-info .top-info-mobile {
+  display: none;
+}
+.main-content .top-info-reverse {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin: 90px 0;
+}
+.main-content .top-info-reverse .text-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
+  line-height: 2.4rem;
+}
+.main-content .top-info-reverse .text-content h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #222222;
+  padding-bottom: 15px;
+}
+.main-content .top-info-reverse .text-content p {
+  margin: 15px 0;
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+.main-content .top-info-reverse .text-content button {
+  border: 1px solid #222222;
+  color: #222222;
+  width: 115px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background: none;
+}
+.main-content .top-info-reverse .top-info-desktop {
+  width: 50%;
+  padding-right: 15px;
+}
+.main-content .top-info-reverse .top-info-mobile {
+  display: none;
+}
+.main-content .recent-projects .project {
+  position: relative;
+}
+.main-content .recent-projects .project .project-right-tab {
+  position: absolute;
+  z-index: 0;
+  background-color: #D8D8D8;
+  padding: 35px 55px;
+  font-size: 2.4rem;
+  font-weight: normal;
+  right: 0;
+  bottom: -37px;
+  letter-spacing: 7px;
+}
+.main-content .recent-projects h2 {
+  padding-bottom: 40px;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.main-content .recent-projects .project .project-left-tab {
+  position: absolute;
+  z-index: 0;
+  background-color: #D8D8D8;
+  padding: 35px 55px;
+  font-size: 2.4rem;
+  font-weight: normal;
+  left: 0;
+  bottom: -37px;
+  letter-spacing: 7px;
+}
+.main-content .recent-projects .project .project-desktop {
+  width: 100%;
+}
+.main-content .recent-projects .project .project-mobile {
+  display: none;
+}
+.main-content .recent-projects p {
+  margin: 80px auto;
+  width: 65%;
+  font-size: 1.8rem;
+}
+.jumbotron {
+  position: relative;
+}
+.jumbotron h1 {
+  position: absolute;
+  bottom: 30px;
+  left: -110px;
+  z-index: 0;
+  font-weight: bold;
+  font-size: 6.4rem;
+  line-height: 8rem;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+}
+.jumbotron .jumbotron-desktop {
+  width: 100%;
+  z-index: 3;
+}
+.jumbotron .jumbotron-mobile {
+  display: none;
+}
+@media (max-width: 500px) {
+  .container {
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+  }
+  .jumbotron h1 {
+    margin-left: -40px;
+  }
+  .jumbotron .jumbotron-desktop {
+    display: none;
+  }
+  .jumbotron .jumbotron-mobile {
+    width: 100%;
+    display: flex;
+  }
+  .container .main-content {
+    width: 100%;
+  }
+  .container .main-content .top-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin: 40px 0;
+    width: 100%;
+  }
+  .container .main-content .top-info .text-content {
+    width: 100%;
+    padding-top: 20px;
+  }
+  .container .main-content .top-info .text-content h2 {
+    font-size: 2.4rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .main-content .top-info .text-content p {
+    font-size: 1.8rem;
+    padding-bottom: 20px;
+  }
+  .main-content .top-info .text-content button {
+    width: 100%;
+    border: 1px solid #222222;
+    background: #FFFFFF;
+    font-size: 1.8rem;
+  }
+  .main-content .top-info .top-info-desktop {
+    display: none;
+  }
+  .main-content .top-info .top-info-mobile {
+    width: 100%;
+    display: flex;
+  }
+  .main-content .top-info-reverse {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin: 40px 0;
+    width: 100%;
+  }
+  .main-content .top-info-reverse .text-content {
+    width: 100%;
+    padding-top: 20px;
+  }
+  .main-content .top-info-reverse .text-content h2 {
+    font-size: 2.4rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .main-content .top-info-reverse .text-content p {
+    font-size: 1.8rem;
+    padding-bottom: 20px;
+  }
+  .main-content .top-info-reverse .text-content button {
+    width: 100%;
+    border: 1px solid #222222;
+    background: #FFFFFF;
+    font-size: 1.8rem;
+  }
+  .main-content .top-info-reverse .top-info-desktop {
+    display: none;
+  }
+  .main-content .top-info-reverse .top-info-mobile {
+    width: 100%;
+    display: flex;
+  }
+  .main-content .recent-projects h2 {
+    padding: 20px 0 35px;
+    font-weight: bold;
+    font-size: 2.4rem;
+  }
+  .main-content .recent-projects .project .project-desktop {
+    display: none;
+  }
+  .main-content .recent-projects .project .project-mobile {
+    width: 125%;
+    display: flex;
+    margin-left: -50px;
+  }
+  .main-content .recent-projects .project .project-right-tab {
+    right: 15px;
+    left: 15px;
+    bottom: -75px;
+    font-size: 2rem;
+    text-align: center;
+    padding: 35px 65px;
+  }
+  .main-content .recent-projects .project .project-left-tab {
+    right: 15px;
+    left: 15px;
+    bottom: -75px;
+    font-size: 2rem;
+    text-align: center;
+    padding: 35px;
+  }
+  .main-content .recent-projects p {
+    width: 90%;
+    margin-top: 100px;
+    padding-bottom: 0px;
+  }
+}
+.jumbotron h1 {
+  position: absolute;
+  bottom: 30px;
+  left: 85px;
+  z-index: 0;
+  font-weight: bold;
+  font-size: 6rem;
+  line-height: 7rem;
+  color: #FFFFFF;
+}
+.jumbotron .jumbotron-desktop {
+  width: 100%;
+  z-index: 3;
+}
+.jumbotron .jumbotron-mobile {
+  display: none;
+}
+.container .main-content {
+  width: 80%;
+  margin: auto;
+}
+.main-content .services-content p {
+  margin: 20px 0;
+  padding: 20px 0;
+  font-size: 1.3rem;
+}
+.tabs {
+  width: 100%;
+  padding-bottom: 30px;
+}
+.tabs .tabs-links {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.tabs .tabs-links .tabs-link {
+  width: 23%;
+  padding: 10px 6px;
+  border: 1px solid #222222;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+.tabs-content .tab-item {
+  display: none;
+}
+.selected-link {
+  background: #5E9FB9;
+  color: #FFFFFF;
+}
+.tabs .selected-tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.tabs .selected-tab .text-content {
+  width: 49%;
+  padding: 25px 0;
+}
+.tabs .selected-tab .text-content h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  padding: 20px 0 0px;
+}
+.tabs .selected-tab .text-content p {
+  font-size: 1.3rem;
+  margin-top: 0px;
+}
+.tabs .selected-tab .tab-desktop-image {
+  width: 46%;
+  margin-top: 85px;
+}
+.tabs .selected-tab .tab-mobile-image {
+  display: none;
+}
+@media (max-width: 500px) {
+  .container {
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+  }
+  .tab-item .tab-desktop-image {
+    display: none;
+  }
+  .jumbotron .jumbotron-desktop {
+    display: none;
+  }
+  .jumbotron .jumbotron-mobile {
+    width: 100%;
+    display: flex;
+  }
+  .tabs .tabs-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .tabs .tabs-links .tabs-link {
+    margin-top: 20px;
+    width: 100%;
+    border: 1px solid black;
+    padding: 18px 0;
+    font-size: 2rem;
+  }
+  .main-content .services-content p {
+    margin: 5px 0;
+    font-size: 2rem;
+  }
+  .services-content .selected-tab {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .services-content .selected-tab .text-content {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .services-content .selected-tab .text-content p {
+    font-size: 2rem;
+  }
+  .services-content .selected-tab .tab-mobile-image {
+    width: 100%;
+    display: flex;
+    padding-bottom: 30px;
+  }
+}
+.contact-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.left {
+  width: 48%;
+}
+.left h2 {
+  font-size: 1.8rem;
+  color: #222222;
+  font-weight: bold;
+  line-height: 1.4;
+  padding: 30px 0;
+}
+.left .lable h4 {
+  font-weight: bold;
+  color: #828282;
+  font-size: 1.2rem;
+  padding-bottom: 5px;
+}
+.left .lable input {
+  width: 100%;
+  padding: 5px 8px;
+  color: #828282;
+  font-size: 0.9rem;
+  border: 1px solid #D8D8D8;
+  border-radius: 3px;
+}
+.lable p {
+  color: #828282;
+  font-size: 1rem;
+}
+.left .lable h3 {
+  font-weight: normal;
+  color: #000000;
+  font-size: 1.2rem;
+  padding-bottom: 5px;
+  padding-top: 20px;
+}
+.left .lable .box {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #D8D8D8;
+}
+.left .lable textarea {
+  height: 100px;
+  width: 100%;
+  border: 1px solid #D8D8D8;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+.radio {
+  font-size: 1.4rem;
+}
+.submit {
+  border: 1px solid #000000;
+  width: 120px;
+  padding: 10px 0;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 10px 0 40px;
+}
+.right {
+  display: flex;
+  padding-left: 70px;
+  flex-direction: column;
+  margin: 0;
+  width: 48%;
+}
+.right h2 {
+  font-size: 1.8rem;
+  color: #222222;
+  font-weight: bold;
+  line-height: 1.4;
+  padding: 0;
+  margin-top: 40px;
+}
+.right .contact-text h3 {
+  font-size: 1.8rem;
+  margin-top: 10px;
+  color: #222222;
+  margin-top: -15px;
+}
+.right .contact-text p {
+  font-size: 1.5rem;
+  padding-bottom: 40px;
+  color: #222222;
+  font-weight: normal;
+}
+@media (max-width: 500px) {
+  .container {
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+  }
+  .jumbotron .jumbotron-desktop {
+    display: none;
+  }
+  .jumbotron .jumbotron-mobile {
+    width: 100%;
+    display: flex;
+  }
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: space-between;
+  }
+  .left {
+    width: 100%;
+  }
+  .left h2 {
+    font-size: 2.8rem;
+    padding-bottom: 40px;
+  }
+  .left .lable h4 {
+    font-weight: normal;
+    color: #000000;
+    font-size: 1.8rem;
+    width: 100%;
+  }
+  .left .lable input {
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  .lable p {
+    font-size: 1.4rem;
+    padding-bottom: 20px;
+  }
+  .left .lable h3 {
+    font-size: 2rem;
+  }
+  .left .lable .box {
+    padding: 10px;
+  }
+  .left .lable textarea {
+    height: 150px;
+  }
+  .radio {
+    font-size: 1.6rem;
+    justify-content: space-between;
+    margin-top: 10px;
+    text-decoration: none;
+    font: #000000;
+  }
+  .submit {
+    margin-top: 30px;
+    padding: 20px 0 8px;
+    width: 100%;
+    font-size: 1.8rem;
+  }
+  .right {
+    width: 100%;
+    padding: 0;
+  }
+  .right h2 {
+    font-size: 2.8rem;
+    padding-bottom: 20px;
+  }
+  .right .contact-text h3 {
+    font-size: 2rem;
+  }
+  .right .contact-text p {
+    font-size: 1.8rem;
+  }
+}
+.main-content .about-recent-projects .about-project {
+  position: relative;
+}
+.main-content .about-recent-projects .about-project .about-project-right-tab {
+  position: absolute;
+  z-index: 0;
+  background-color: #D8D8D8;
+  padding: 10px 20px;
+  font-size: 2rem;
+  font-weight: normal;
+  left: 0px;
+  top: -60px;
+  letter-spacing: 7px;
+}
+.main-content .about-recent-projects h2 {
+  padding: 60px 0 130px;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.main-content .about-recent-projects .about-project .about-project-left-tab {
+  position: absolute;
+  z-index: 0;
+  background-color: #D8D8D8;
+  padding: 10px 20px;
+  font-size: 2rem;
+  font-weight: normal;
+  left: 0px;
+  top: -60px;
+  letter-spacing: 7px;
+}
+.main-content .about-recent-projects .about-project .about-project-desktop {
+  width: 100%;
+}
+.main-content .about-recent-projects p {
+  margin: 80px auto;
+  width: 65%;
+  font-size: 1.8rem;
+  padding-bottom: 30px;
+}
